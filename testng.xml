@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="tests" thread-count="3">
+<test name="Test1">
+    <groups>
+        <run>
+            <include name="functest"/>
+            <include name="login"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="DoriTest"/>
+    </classes>
+</test>
+</suite>
+
